@@ -13,5 +13,3 @@ excluded and `data/README.md` for the library details.
 | `sequencing_run_statistics.tsv` | Read pairs, bases, Q20, Q30 and GC content per library, from the sequencing facility report. |
 | `md5_checksums.txt` | Checksums of the twelve FASTQ files as delivered. |
 
-Accessions are added here and to `data/README.md` once the submission is
-released.
