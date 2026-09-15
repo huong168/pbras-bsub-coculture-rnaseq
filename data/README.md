@@ -20,7 +20,7 @@ repository. Metadata for depositing them in the NCBI SRA is prepared in
 `submission/`; file sizes, md5 checksums and per-run statistics are in
 `submission/sequencing_run_statistics.tsv`.
 
-> BioProject accession: **TODO** — add once the submission is accepted, and cite
+> BioProject accession: PRJNA1528400
 > it in the Data Availability statement of the manuscript.
 
 **Reference genome.** *Penicillium brasilianum* MG11, assembly
