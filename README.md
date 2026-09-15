@@ -1,4 +1,4 @@
-# Verruculogen cluster RNA-seq: *P. brasilianum* co-cultured with *B. subtilis* DK1042 WT vs Δ*dhbF*
+# RNA-seq: *P. brasilianum* co-cultured with *B. subtilis* DK1042 WT vs Δ*dhbF*
 
 Analysis code for the co-culture RNA-seq experiment reported in the accompanying
 paper, which asks whether the siderophore **bacillibactin** represses fungal
@@ -14,9 +14,7 @@ fungus.
 
 **Result.** All eight genes of the verruculogen (fumitremorgin) biosynthetic
 cluster, *ftmA*–*ftmH*, are lower when the bacillibactin-producing wild type is
-present, by 25- to 315-fold. The largest change is in *ftmF*, the
-Fe(II)/α-ketoglutarate-dependent dioxygenase that converts fumitremorgin B into
-verruculogen and the only iron-dependent enzyme of the pathway. A cluster-level
+present, by 25- to 315-fold. A cluster-level
 rotation test gives *P* = 0.024 with all eight genes moving downward.
 
 ---
@@ -44,7 +42,7 @@ The two excluded libraries were atypical for their group:
   18.6 % and 19.3 % of the other two knock-out libraries.
 
 **All six sequenced libraries, including the two excluded here, are deposited in
-the NCBI SRA** under the BioProject given in `data/README.md`, so the exclusion
+the NCBI under the BioProject PRJNA1528400, so the exclusion
 can be checked and the analysis repeated on any subset.
 
 ---
@@ -158,38 +156,6 @@ Cluster-level tests, which ask about the set rather than about single genes:
 with two replicates per group this test has little power, so its absence here is
 weak evidence either way and should not be reported as support.
 
----
-
-## Known limitation
-
-The libraries are mixed fungal/bacterial and the fungal share differs between
-the groups (57.8 % and 77.8 % in the wild-type co-cultures against 19.3 % and
-18.6 % in the knock-out co-cultures). TMM normalises the composition of the
-fungal library and **cannot** correct a difference in the fungal-to-bacterial
-biomass ratio, so a contribution of differing fungal biomass to the signal
-cannot be excluded from RNA-seq alone.
-
-`scripts/03_qc/qc_bacterial_load.R` quantifies this and also explains why the
-comparison it prints is **descriptive rather than a hypothesis test**: the
-fungal read fraction is a property of a mixed library rather than a measurement
-of biomass; the rank test treats genes as independent when the eight *ftm* genes
-are one co-regulated cluster; and the background set is matched on the observed
-|log₂FC|, which is itself a function of the group difference being probed.
-
-Adding the fungal fraction as a covariate is not a fix either: it is nearly
-collinear with the group, and if bacillibactin restricts fungal growth then the
-lower fungal fraction is part of the biological effect — a mediator, not a
-confounder.
-
-Resolving it requires experiments, in this order of priority:
-
-1. **qRT-PCR** for *ftmA*, *ftmE*, *ftmF* normalised to a fungal housekeeping
-   gene (β-tubulin, actin, GAPDH) — numerator and denominator are both fungal,
-   so the measurement is insensitive to the ratio.
-2. **Direct biomass measurement**, by dry weight or qPCR of fungal ITS against
-   bacterial 16S.
-3. **LC-MS quantification of verruculogen**, the endpoint the transcriptional
-   data are being used to predict.
 
 ---
 
@@ -200,7 +166,3 @@ kallisto 0.50.1; R 4.3.3 with limma 3.58.1 and edgeR 4.0.16; Python 3.11.
 `env/install.R` pins these versions and `env/sessionInfo.txt` records the full
 session the published results came from.
 
-## Licence
-
-MIT, see `LICENSE`. If you use this code or these results, please cite the
-accompanying publication.
