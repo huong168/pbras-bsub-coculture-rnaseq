@@ -1,0 +1,23 @@
+{
+  "title": "pbras-bsub-coculture-rnaseq: analysis code for Penicillium brasilianum RNA-seq in co-culture with Bacillus subtilis",
+  "description": "Analysis code and processed count data for the RNA-seq comparison of Penicillium brasilianum SFC20200506-M13 co-cultured with wild-type Bacillus subtilis DK1042 versus the bacillibactin-deficient delta-dhbF mutant. Includes differential expression, gene set testing and quality control scripts, the processed HTSeq count tables and the annotation files needed to reproduce the reported results.",
+  "upload_type": "software",
+  "license": "mit",
+  "creators": [
+    {
+      "name": "Pham, Huong T.",
+      "orcid": "0000-0002-6896-133X",
+      "affiliation": "College of Pharmacy, Sookmyung Women's University, Seoul, Republic of Korea"
+    }
+  ],
+  "keywords": [
+    "RNA-seq",
+    "transcriptomics",
+    "Penicillium brasilianum",
+    "Bacillus subtilis",
+    "co-culture",
+    "bacillibactin",
+    "siderophore",
+    "biosynthetic gene cluster"
+  ]
+}
