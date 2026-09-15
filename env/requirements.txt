@@ -1,0 +1,5 @@
+# Python packages. The analysis itself is in R; Python is used only by
+# scripts/00_quantification/kallisto_quant.py, which needs nothing beyond the
+# standard library. These are for the optional plotting and table utilities.
+pandas>=2.0
+numpy>=1.24

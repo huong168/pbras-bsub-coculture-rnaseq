@@ -1,0 +1,8 @@
+roast(), 99,999 rotations -- 2 WT vs 2 KO
+
+PRIMARY (pre-specified): Verruculogen
+Everything else on this page, and the whole fry table, is exploratory.
+
+Verruculogen *         n= 8 | Down P=0.02408  Up P=0.97592  Active.Prop(Down)=1.00  Active.Prop(Up)=0.00
+Iron_uptake            n=10 | Down P=0.88603  Up P=0.11398  Active.Prop(Down)=0.10  Active.Prop(Up)=0.50
+Fe_S_iron_dependent    n=10 | Down P=0.28412  Up P=0.71588  Active.Prop(Down)=0.20  Active.Prop(Up)=0.10

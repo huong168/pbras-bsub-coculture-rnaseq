@@ -1,0 +1,26 @@
+# Large, fully regenerable outputs. Everything here is produced by the scripts
+# in scripts/ from data/ in about a minute; only the tables and figures the
+# manuscript depends on are tracked.
+results/de_tables/cpm_*.tsv
+results/de_tables/rpkm_*.tsv
+results/de_tables/*_treat.tsv
+results/de_tables/*_eBayes.tsv
+results/geneset/fit_objects_*.rds
+
+# Raw reads, reference genome and quantification output are not distributed
+# with the repository. See data/README.md.
+data/raw/
+data/reference/
+data/kallisto/
+*.fastq
+*.fastq.gz
+*.idx
+
+# Editor and OS noise
+.Rhistory
+.RData
+.Rproj.user/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
